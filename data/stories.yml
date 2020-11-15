@@ -1,0 +1,8 @@
+stories:
+ - story: greet and mood_update
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: mood_update
+   - action: mood_form
+   - active_loop: mood_form

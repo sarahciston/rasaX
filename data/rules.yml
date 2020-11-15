@@ -1,0 +1,14 @@
+rules:
+ - rule: activate mood form
+   steps:
+   - intent: mood_update
+   - action: mood_form
+   - active_loop: mood_form
+
+ - rule: submit form
+   condition:
+   - active_loop: mood_form
+   steps:
+   - action: mood_form
+   - active_loop: null
+   - action: utter_mood_update

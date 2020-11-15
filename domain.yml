@@ -1,0 +1,29 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- mood_check
+- mood_update
+slots:
+  mood:
+    type: unfeaturized
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: "Hello! How can I help you?\n"
+  - text: "Hi!\n"
+  utter_mood_update:
+  - text: "Thanks, I've logged your mood. Anything else you want to tell me about?\n"
+  utter_mood_check:
+  - text: "Here's what I've noticed you've been feeling.\n"
+  - text: This week your mood has been on an upswing, much happier vibes.
+actions:
+- '...'
+- utter_greet
+- utter_mood_update
+forms:
+  mood_form:
+    mood:
+    - type: from_text
+version: '2.0'

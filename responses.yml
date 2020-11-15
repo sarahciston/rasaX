@@ -1,0 +1,14 @@
+responses:
+   utter_greet:
+       - text: |
+           Hello! How can I help you?
+       - text: |
+           Hi!
+   utter_mood_update:
+       - text: |
+           Thanks, I've logged your mood. Anything else you want to tell me about?
+   utter_mood_check:
+       - text: |
+           Here's what I've noticed you've been feeling.
+       - text: |
+           This week your mood has been on an upswing, much happier vibes.

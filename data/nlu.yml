@@ -1,0 +1,22 @@
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - Hey!
+    - Hallo
+    - Good day
+    - Good morning
+
+- intent: mood_update
+  examples: |
+    - I'm feeling great today, very happy
+    - I wish I felt better, I just worry about everything
+    - Blah
+
+- intent: mood_check
+  examples: |
+    - How has my mood been lately?
+    - Can you tell me my mood trend?
+    - What's my mood this week?
+    
+- intent: out_of_scope

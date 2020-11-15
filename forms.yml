@@ -1,0 +1,4 @@
+forms:
+  mood_form:
+    mood:
+    - type: from_text
