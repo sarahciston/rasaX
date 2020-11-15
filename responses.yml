@@ -4,11 +4,11 @@ responses:
            Hello! How can I help you?
        - text: |
            Hi!
-   utter_mood_update:
+   utter_update:
        - text: |
-           Thanks, I've logged your mood. Anything else you want to tell me about?
-   utter_mood_check:
+           Thanks, I've logged this. Anything else you want to tell me about?
+   utter_check:
        - text: |
-           Here's what I've noticed you've been feeling.
+           Here's what I've noticed you've been [feeling](mood):
        - text: |
-           This week your mood has been on an upswing, much happier vibes.
+           This week your [mood](factor) has been on an upswing, much [happier vibes](mood).

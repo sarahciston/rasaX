@@ -1,14 +1,47 @@
+version: "2.0"
+stories:
+- story: Story from Conversation ID 0a4592f2e57b490aa33614540e3bca52
+  steps:
+  - intent: update
+  - action: mood_form
+  - active_loop: mood_form
+  - slot_was_set:
+    - requested_slot: mood
+  - slot_was_set:
+    - mood: How has my mood been?
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_update
+  - intent: check
+    entities:
+    - factor: mood
+  - action: utter_update
+  - intent: check
+  - action: utter_update
+  - intent: update
+  - action: mood_form
+  - active_loop: mood_form
+  - slot_was_set:
+    - mood: How has my mood been?
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_update
+  - intent: out_of_scope
+  - action: utter_out_of_scope
 rules:
- - rule: activate mood form
-   steps:
-   - intent: mood_update
-   - action: mood_form
-   - active_loop: mood_form
-
- - rule: submit form
-   condition:
-   - active_loop: mood_form
-   steps:
-   - action: mood_form
-   - active_loop: null
-   - action: utter_mood_update
+- rule: activate mood form
+  steps:
+  - intent: update
+  - action: mood_form
+  - active_loop: mood_form
+- rule: submit form
+  condition:
+  - active_loop: mood_form
+  steps:
+  - action: mood_form
+  - active_loop: null
+  - slot_was_set:
+    - mood: null
+  - action: utter_update

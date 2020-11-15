@@ -1,0 +1,36 @@
+- lookup:
+  - mood:
+    examples: |
+      - angry
+      - irritable
+      - anxious
+      - tense
+      - on edge
+      - overwhelmed
+      - can’t cope
+      - worried
+      - intrusive thoughts
+      - hard to focus
+      - can’t concentrate
+      - hopeless
+      - lost
+      - worthless
+      - guilty
+      - sad
+      - tearful
+      - melancholy
+      - depressed
+      - down
+      - crying/weepy
+      - suicidal
+      - out of control
+      - mood swings
+      - sensitive
+      - hurt feelings
+      - fear of rejection
+      - abandonment
+      - panic
+      - disinterested
+      - unproductive
+      - antisocial
+      - withdrawn

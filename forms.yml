@@ -1,4 +1,5 @@
 forms:
   mood_form:
     mood:
-    - type: from_text
+    - type: from_entity
+      entity: mood

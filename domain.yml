@@ -3,8 +3,15 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - greet
-- mood_check
+- check
+- update
+- compare
+- out_of_scope
 - mood_update
+entities:
+- mood
+- weather
+- factor
 slots:
   mood:
     type: unfeaturized
@@ -13,17 +20,29 @@ responses:
   utter_greet:
   - text: "Hello! How can I help you?\n"
   - text: "Hi!\n"
-  utter_mood_update:
+  utter_update:
   - text: "Thanks, I've logged your mood. Anything else you want to tell me about?\n"
-  utter_mood_check:
+  - text: Want to share anything else? Any symptoms or activities today?
+  utter_check:
   - text: "Here's what I've noticed you've been feeling.\n"
   - text: This week your mood has been on an upswing, much happier vibes.
+  utter_compare:
+  - text: Let me pull up some info on that for you
+  - text: I can find out for you right now
+  utter_out_of_scope:
+  - text: I'm here to help you keep track of things like your mood and your body,
+      here to listen so you can better listen to yourself. I use sophisticated AI
+      (and basic charts) to notice patterns you might have missed and ways to help
+      yourself feel better on a daily basis.
+  - text: Let's get back to talking about you!
 actions:
 - '...'
 - utter_greet
-- utter_mood_update
+- utter_update
+- utter_check
+- utter_compare
+- utter_out_of_scope
 forms:
   mood_form:
     mood:
     - type: from_text
-version: '2.0'
